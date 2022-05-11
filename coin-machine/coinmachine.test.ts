@@ -22,8 +22,8 @@ test("will give 30 cents with a quarter and a nickel", () => {
     expect(cm.pay(amount)).toEqual({ q: 1, d: 0, n: 1, p: 0 });
 });
 
-test("will give 55 cents with a dimes, nickels, and pennies", () => {
-    const cm = new CoinMachine(1, 0, 5, 100);
+test("will give 55 cents with dimes, nickels, and pennies", () => {
+    const cm = new CoinMachine(0, 3, 4, 100);
     const amount = 55;
     expect(cm.pay(amount)).toEqual({ q: 0, d: 3, n: 4, p: 5 });
 });
