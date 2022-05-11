@@ -31,8 +31,6 @@ class CoinMachine {
                 const coin = order[i];
                 if (amount === 0)
                     break;
-                // else for (let j = i; j > -1; j--)
-                // order.splice(j + 1, 0, ...order.splice(j, 1));
                 coins[coin] = Math.min(Math.floor(amount / coinValue[coin]), supply[coin]);
                 supply[coin] -= coins[coin];
                 amount -= coins[coin] * coinValue[coin];
